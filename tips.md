@@ -97,3 +97,12 @@ abc
 
 需要注意的是，当使用类访问不存在的变量是，不会经过__getattr__函数。而descriptor不存在此问题，只是把instance标识为none而已。
 ```
+
+```
+类的私有属性
+class Program(object):
+  def __init__(self, weight):
+    self.__weight = weight
+    
+__weight -> _Program__weight
+```
