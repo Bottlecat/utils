@@ -12,7 +12,7 @@ for...else:
 ```
 
 ```
-iteritems效率高？
+iteritems省内存
 ```
 
 ```
