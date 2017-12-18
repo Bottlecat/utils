@@ -116,3 +116,7 @@ logging模块、itertools模块、collections模块
 时间戳、时间字符串、时间元组转换图：
 http://litaotao.github.io/python-materials
 ```
+
+```
+元组：不可变、拆包、作为记录。
+```
