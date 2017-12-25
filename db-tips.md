@@ -34,4 +34,6 @@ InnoDB引擎:
     MySQL的恢复机制要求：
         1. 在一个事务未提交前，其他并发事务不能插入满足其锁定条件的任何记录，也就是不允许出现幻读。（why？防止重复插入同一条数据？）
         2. CTAS操作给原表加锁（不确定（non-deterministic）的SQL，不推荐使用）
+           tips：通过使用“select * from source_tab ... Into outfile”和“load data infile ...”语句组合来间接实现，采用这种方式MySQL不会给source_tab加锁
+              
 ```
