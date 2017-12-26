@@ -1,4 +1,6 @@
 ```
+# redis高可用方案 #
+
 https://www.cnblogs.com/jaycekon/p/6237562.html
 
 一、Sentinel的作用：
