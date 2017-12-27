@@ -49,3 +49,13 @@ zset:
 other:
   type\keys\delete\exists\expire\rename\move\randomkey
 ```
+
+```
+# redis tips #
+
+http://www.cnblogs.com/melonjiang/p/5342383.html
+
+1. 连接池
+2. 管道
+3. 发布和订阅
+```
