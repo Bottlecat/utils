@@ -34,5 +34,18 @@ hash:
   get\set\len\keys\vals\exists\del\incr
   
 list:
+  lpush\rpush\linsert\lset\rpoplpush\brpoplpush\blpop\brpop
+  lindex\llen\lrange\lpop\lrem\ltrim
   
+set:
+  sadd\smembers\scard\sismember\smove\spop\srandmember\srem
+  sdiff\sdiffstore\sinter\sinterstore\sunion\sunionstore
+  
+zset:
+  zadd\zcard\zcount\zincrby\zrange\zrevrange\zrank\zrevrank
+  zscore\zrem\zremrangebyrank\zremrangebyscore
+  zinterstore\zunionstore
+  
+other:
+  type\keys\delete\exists\expire\rename\move\randomkey
 ```
