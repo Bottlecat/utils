@@ -19,3 +19,20 @@ C、Master-Slave切换后，master_redis.conf、slave_redis.conf和sentinel.conf
 若 Master 重新向 Sentinel 的 PING 命令返回有效回复， Master 的主观下线状态就会被移除。
 
 ```
+
+```
+# redis api #
+
+https://www.cnblogs.com/melonjiang/p/5342505.html
+
+支持存储的value类型：string(字符串)、list(链表)、set(集合)、zset(sorted set --有序集合)和hash（哈希类型）
+
+string:
+  get\set\range\bit\len\incr\decr\append
+  
+hash:
+  get\set\len\keys\vals\exists\del\incr
+  
+list:
+  
+```
