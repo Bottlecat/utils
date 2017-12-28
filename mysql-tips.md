@@ -32,9 +32,15 @@ mysql开启多实例：
       service apparmor reload
     4.初始化数据库
       mysqld --initialize --datadir=new_datadir --user=mysql
+      或
+      mysql_install_db  --defaults-file=conf/3306my.cnf
     5.启动
-      mysqld_safe --defaults-file=/etc/mysql/my1.cnf
-    6.安全模式启动
+      mysqld_safe --defaults-file=/etc/mysql/my1.cnf &
+    6.初始化root密码
+      mysqladmin -P 3306 -u root password '123123'
+    
+*****
+    6.安全模式启动
       mysqld_safe --defaults-file = /etc/mysql/my1.cnf --skip-grant-tables
     7.无密码登陆
       mysql -S new_datadir/mysqld.sock
@@ -43,6 +49,8 @@ mysql开启多实例：
       flush privileges;
     9.再次设置密码
       SET PASSWORD = PASSWORD('123456');
+
+    
 ```
 
 ```
