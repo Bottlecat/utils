@@ -5,6 +5,9 @@ ubuntu 16.04安装mysql:
   
 mysql开启多实例：
   端口、pid文件、socket文件、数据目录、日志目录
+  安装位置：/usr/share/mysql
+  配置目录：/etc/mysql
+  数据目录：/var/lib/mysql/
 ```
 
 ```
