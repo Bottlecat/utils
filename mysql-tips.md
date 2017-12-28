@@ -8,6 +8,32 @@ mysql开启多实例：
   安装位置：/usr/share/mysql
   配置目录：/etc/mysql
   数据目录：/var/lib/mysql/
+  
+  tips:
+    apparmor & selinux
+    
+  步骤：
+    1.创建数据目录并修改权限
+      mkdir new_datadir
+      chown -R mysql:mysql new_datadir
+    2.修改配置文件
+      port = 3307
+      socket = new_datadir/mysqld.sock
+      pid-file = new_datadir/mysqld.pid
+      datadir = new_datadir
+      log_error = new_datadir/error.log
+    3.在apparmor中添加读写权限
+      vim /etc/apparmor.d/usr.sbin.mysqld
+      
+      添加：
+        new_datadir/ r,
+        new_datadir/** rwk,
+      
+      service apparmor reload
+    4.初始化数据库
+      mysqld --initialize --datadir=new_datadir --user=mysql
+    5.启动
+      mysqld_safe --defaults-file=/etc/mysql/my1.cnf
 ```
 
 ```
