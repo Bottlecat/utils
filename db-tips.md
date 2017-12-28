@@ -1,5 +1,10 @@
 
 ```
+ubuntu 16.04安装mysql:
+  sudo apt-get install mysql-server
+```
+
+```
 http://blog.csdn.net/xifeijian/article/details/20313977
 
 mysql引擎：MyISAM、InnoDB
