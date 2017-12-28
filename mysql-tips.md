@@ -34,6 +34,15 @@ mysql开启多实例：
       mysqld --initialize --datadir=new_datadir --user=mysql
     5.启动
       mysqld_safe --defaults-file=/etc/mysql/my1.cnf
+    6.安全模式启动
+      mysqld_safe --defaults-file = /etc/mysql/my1.cnf --skip-grant-tables
+    7.无密码登陆
+      mysql -S new_datadir/mysqld.sock
+    8.手动update修改密码
+      update user set authentication_string=password("123456") where user='root' and host='localhost';
+      flush privileges;
+    9.再次设置密码
+      SET PASSWORD = PASSWORD('123456');
 ```
 
 ```
