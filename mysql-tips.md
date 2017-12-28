@@ -3,8 +3,6 @@
 ubuntu 16.04安装mysql:
   sudo apt-get install mysql-server
   
-https://www.cnblogs.com/xiaochina/p/6886115.html
-
 mysql开启多实例：
   端口、pid文件、socket文件、数据目录、日志目录
   安装位置：/usr/share/mysql
@@ -50,9 +48,25 @@ mysql开启多实例：
       update user set authentication_string=password("123456") where user='root' and host='localhost';
       flush privileges;
     9.再次设置密码
-      SET PASSWORD = PASSWORD('123456');
+      SET PASSWORD = PASSWORD('123456');  
+```
 
-    
+```
+mysql 主从复制：
+  https://www.cnblogs.com/xiaochina/p/6886115.html
+  
+  1.开启binlog
+    log-bin=mysql-bin             #开启二进制日志
+    server-id=011                 #定义服务ID
+  2.建立从复制账号
+    grant replication slave on *.* to 'mysync'@'%' identified by '123456';             #所有IP
+  3.查看Master信息
+    show master status;
+  4.进入mysql与master主机建立连接
+    change master to master_host='172.24.0.130',master_port=3306,master_user='mysync',master_password='123456', master_log_file='mysql-bin.000003',master_log_pos=541;
+  5.设置从库只读，启动从主机
+    set global read_only=1;
+    start  slave;
 ```
 
 ```
