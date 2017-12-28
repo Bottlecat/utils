@@ -3,6 +3,8 @@
 ubuntu 16.04安装mysql:
   sudo apt-get install mysql-server
   
+https://www.cnblogs.com/xiaochina/p/6886115.html
+
 mysql开启多实例：
   端口、pid文件、socket文件、数据目录、日志目录
   安装位置：/usr/share/mysql
