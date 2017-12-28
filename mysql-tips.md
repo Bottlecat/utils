@@ -2,6 +2,9 @@
 ```
 ubuntu 16.04安装mysql:
   sudo apt-get install mysql-server
+  
+mysql开启多实例：
+  端口、pid文件、socket文件、数据目录、日志目录
 ```
 
 ```
