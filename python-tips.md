@@ -109,7 +109,12 @@ __weight -> _Program__weight
 
 ```
 logging模块、itertools模块、collections模块
-加密、单元测试、模块测试、性能调优、内存泄漏分析
+
+加密：hashlib
+单元测试：unittest
+文档测试: doctest
+性能调优: timeit、profile\cProfile
+内存泄漏分析: objgraph
 ```
 
 ```
