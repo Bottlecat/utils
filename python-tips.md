@@ -110,7 +110,7 @@ __weight -> _Program__weight
 ```
 logging模块、itertools模块、collections模块
 
-加密：hashlib
+摘要算法（常用于用户的密码）：hashlib
 单元测试：unittest
 文档测试: doctest
 性能调优: timeit、profile\cProfile
