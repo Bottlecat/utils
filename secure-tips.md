@@ -15,4 +15,7 @@ CSRF：跨站请求伪造（Cross-site request forgery）
   与XSS的关系：XSS 是实现 CSRF 的诸多途径中的一条，但绝对不是唯一的一条。
   漏洞：伪造请求，冒充用户在站内的正常操作
   解决方案：请求令牌
+  
+  
+跨域：https://www.cnblogs.com/2050/p/3191744.html
 ```
