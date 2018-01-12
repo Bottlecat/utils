@@ -16,6 +16,20 @@ CSRF：跨站请求伪造（Cross-site request forgery）
   漏洞：伪造请求，冒充用户在站内的正常操作
   解决方案：请求令牌
   
-  
+
+浏览器都有一个同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。
 跨域：https://www.cnblogs.com/2050/p/3191744.html
+  借助JSONP协议：
+    1、通过jsonp跨域，
+       缺点：需要服务端支持
+     
+  借助iframe：
+    2、通过修改document.domain来跨子域
+       缺点：主域必须相同
+
+    3、使用window.name来进行跨域
+       缺点：window.name的值只能是字符串的形式
+
+    4.使用HTML5中新引进的window.postMessage方法来跨域传送数据
+       缺点：IE6、IE7不支持
 ```
