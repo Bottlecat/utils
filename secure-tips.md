@@ -32,4 +32,8 @@ CSRF：跨站请求伪造（Cross-site request forgery）
 
     4.使用HTML5中新引进的window.postMessage方法来跨域传送数据
        缺点：IE6、IE7不支持
+       
+  跨域资源共享 CORS 详解: http://www.ruanyifeng.com/blog/2016/04/cors.html
+    5. CORS与JSONP的使用目的相同，但是比JSONP更强大。
+       JSONP只支持GET请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。
 ```
