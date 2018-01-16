@@ -5,4 +5,7 @@ ref:
   
 推荐框架：django、flask
 不推荐框架：web.py、bottle、tornado
+
+web server：nginx
+WSGI server: gunicorn > uwsgi
 ```
