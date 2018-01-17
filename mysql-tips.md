@@ -107,3 +107,7 @@ InnoDB引擎:
            tips：通过使用“select * from source_tab ... Into outfile”和“load data infile ...”语句组合来间接实现，采用这种方式MySQL不会给source_tab加锁
               
 ```
+
+```
+MySQL索引背后的数据结构及算法原理: http://blog.jobbole.com/24006/
+```
