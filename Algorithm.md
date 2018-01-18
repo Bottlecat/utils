@@ -11,4 +11,8 @@ ref:
 B树：二叉查找树、平衡二叉树、红黑树
 B-树、B+树、B*树：平衡多路查找树
 http://blog.csdn.net/ifollowrivers/article/details/73614549
+
+算法修炼：
+   剑指Offer: https://www.nowcoder.com/ta/coding-interviews?page=1
+   leetcode: https://www.nowcoder.com/ta/leetcode
 ```
