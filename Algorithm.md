@@ -6,4 +6,7 @@ ref:
   ref:
      http://blog.jobbole.com/113428/
      http://blog.jobbole.com/113429/
+     
+二分查找、二叉查找树、平衡二叉树、红黑树、B树、B-树、B+树、B*树
+http://blog.csdn.net/ifollowrivers/article/details/73614549
 ```
