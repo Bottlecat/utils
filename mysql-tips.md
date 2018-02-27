@@ -110,4 +110,5 @@ InnoDB引擎:
 
 ```
 MySQL索引背后的数据结构及算法原理: http://blog.codinglabs.org/articles/theory-of-mysql-index.html
+MySQL学习心得：http://www.cnblogs.com/lyhabc/p/3691555.html
 ```
