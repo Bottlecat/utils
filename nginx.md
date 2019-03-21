@@ -1,8 +1,10 @@
 ```
 user www-data;
 worker_processes auto;
+worker_cpu_affinity 00000001 00000010 00000100 00001000 00010000 00100000 01000000;
 pid /run/nginx.pid;
 worker_rlimit_nofile 2048;
+error_log /www/log/nginx_error.log crit;
 
 events {
         worker_connections 1024;
@@ -24,7 +26,7 @@ http {
         types_hash_max_size 2048;
         server_tokens off;
 
-        # server_names_hash_bucket_size 64;
+        server_names_hash_bucket_size 64;
         # server_name_in_redirect off;
 
         include /etc/nginx/mime.types;
@@ -70,13 +72,19 @@ http {
         client_max_body_size          8m;
         
         #if too big raise 400
-        client_header_buffer_size     1k;
-        large_client_header_buffers   2 1k;
+        client_header_buffer_size     4k;
+        large_client_header_buffers   2 4k;
         
         #keepalive
         keepalive_disable msie6; 
         keepalive_requests 100000;
         keepalive_timeout 65 60;
+        
+        #open_file_cache
+        open_file_cache max=102400 inactive=20s;
+        open_file_cache_valid 30s;
+        open_file_cache_min_uses 1;
+        open_file_cache_errors on;
         
         ##
         # Virtual Host Configs
@@ -147,4 +155,19 @@ net.ipv4.tcp_timestamps = 0
 #用于设置内核放弃TCP连接之前向客户端发生SYN+ACK包的数量，网络连接建立需要三次握手，客户端首先向服务器发生一个连接请求，服务器收到后由内核回复一个SYN+ACK的报文，这个值不能设置过多，会影响服务器的性能，还会引起syn攻击：
 net.ipv4.tcp_synack_retries = 1
 net.ipv4.tcp_syn_retries = 1
+
+timewait 的数量，默认是180000。
+net.ipv4.tcp_max_tw_buckets = 6000
+
+允许系统打开的端口范围。
+net.ipv4.ip_local_port_range = 1024 65000
+
+启用timewait 快速回收。
+net.ipv4.tcp_tw_recycle = 1
+
+开启重用。允许将TIME-WAIT sockets 重新用于新的TCP 连接。
+net.ipv4.tcp_tw_reuse = 1
+
+开启SYN Cookies，当出现SYN 等待队列溢出时，启用cookies 来处理。
+net.ipv4.tcp_syncookies = 1
 ```
