@@ -75,4 +75,7 @@ atomic increment
 Common use cases for lists
     1.Remember the latest updates posted by users into a social network.
     2.Communication between processes, using a consumer-producer pattern where the producer pushes items into a list, and a consumer (usually a worker) consumes those items and executed actions. Redis has special list commands to make this use case both more reliable and efficient.
+    
+Sets
+poker game
 ```
